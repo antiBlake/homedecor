@@ -1,9 +1,10 @@
 import Nav from './Components/Nav';
 
-function App() {
+const App= ()=> {
   return (
     <div className="App">
       <Nav />
+
     </div>
   );
 }
