@@ -1,11 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {FC} from 'react';
+import Nav from './Components/Nav';
 import './App.css';
 
-function App() {
+const App= ()=> {
   return (
     <div className="App text-3xl">
-      big boy yes its cvoming
+      <Nav />
 
     </div>
   );
