@@ -16,6 +16,7 @@ const Nav = () => {
           <li className="list-none cursor-pointer">Home</li>
           <li className="list-none cursor-pointer">Products</li>
           <li className="list-none cursor-pointer">About Us</li>
+          {/* '' */}
         </div>
         <div className="nav-2 flex flex-row items-center justify-evenly w-3/12">
           <div className="searchh flex flex-row items-center justify-evenly">
