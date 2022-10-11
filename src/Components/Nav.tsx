@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useState, FC } from 'react'
 
 const Nav = (): any => {
+    const [menu,setMenu] = useState<boolean>(false);
+    const handleMenu =()=>{
+        setMenu(!menu)
+
+    }
   return (
     <div className='Nav'>
-        <div className='web-nav flex  font-baloo font-bold text-gray-600 justify-evenly border-b-2'>
+        <div className='hidden web-nav lg:flex font-baloo font-bold text-gray-600 justify-evenly border-b-2'>
             <div className='logo w-2/12 sm:w-1/12'>
             <img src='images/logo.svg'  />
             
@@ -50,8 +55,26 @@ const Nav = (): any => {
 
 
         </div>
-        <div className='mobile-nav'>
+        <div className='mobile lg:hidden'>
+        <div className='mobile-nav   flex font-baloo font-bold text-gray-600  m-auto justify-between items-center w-10/12'>
+        <div className='logo w-3/12 '>
+            <img src='images/logo.svg'  />
+            
+            </div>
+            <div className='bar' onClick={handleMenu}>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 ">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
 
+            </div>
+
+
+        </div>
+        <div className={` ${menu ? 'h-32' : 'h-0'} menu my-4 grid gap-2  transition-all delay-300 duration-500 overflow-hidden text-center font-baloo font-bold text-sm`}>
+                <li className='list-none'>Home</li>
+                <li className='list-none'>Products</li>
+                <li className='list-none'>About Us</li>
+            </div>
         </div>
         
     </div>
