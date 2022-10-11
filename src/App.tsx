@@ -1,11 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Nav from './Components/Nav';
 
 function App() {
   return (
-    <div className="App text-3xl">
-      big boy yes its cvoming
+    <div className="App">
+      <Nav />
 
     </div>
   );
