@@ -5,6 +5,8 @@ type Props = {
 };
 
 const Hero = (props: Props) => {
+  const name = ['book', 'yam']
+  name.filter
   return <div>Hero</div>;
 };
 
