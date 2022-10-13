@@ -8,7 +8,7 @@ const Nav = () => {
 
   return (
     <div className="Nav">
-      <div className="hidden web-nav lg:flex font-baloo font-bold text-gray-600 justify-evenly border-b-2">
+      <div className="hidden web-nav lg:flex font-baloo font-bold text-gray-600 justify-evenly shadow">
         <div className="logo w-2/12 sm:w-1/12">
           <img src="images/logo.svg" alt="logo" />
         </div>
@@ -103,12 +103,24 @@ const Nav = () => {
         </div>
         <div
           className={` ${
-            menu ? 'h-32' : 'h-0'
-          } menu my-4 grid gap-2  transition-all delay-300 duration-500 overflow-hidden text-center font-baloo font-bold text-sm`}
+            menu ? 'left-0' : 'left-[-1220px]' 
+          } fixed top-0 w-full bg-white z-50 menu grid gap-8  transition-all delay-300 duration-500 overflow-hidden text-center font-baloo font-bold text-md h-88 p-6 shadow`}
         >
+            <div className='flex justify-between' >
+            <div className="logo w-2/12 ">
+            <img src="images/logo.svg" alt={'logo'} />
+          </div>
+            <svg onClick={handleMenu} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-black">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+</svg>
+
+            </div>
           <li className="list-none">Home</li>
           <li className="list-none">Products</li>
           <li className="list-none">About Us</li>
+          <div className="sign-up-btn bg-emerald-700 px-6 py-4 text-white rounded-lg cursor-pointer">
+            Sign Up
+          </div>
         </div>
       </div>
     </div>
